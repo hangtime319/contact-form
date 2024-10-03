@@ -203,10 +203,6 @@ button:hover {
   font-weight: 200;
 }
 
-.display-none {
-  display: none;
-}
-
 @media (max-width: 768px) {
   .container-form {
     height: auto;

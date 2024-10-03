@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+    <meta
+      name="description"
+      content="Entre em contato com a Sua Empresa. Preencha o formulário e tire suas dúvidas. Atendemos a todas as suas necessidades."
+    />
+    <meta
+      name="keywords"
+      content="contato, formulário, empresa, dúvidas, atendimento"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -106,11 +114,13 @@
                 Support Request
               </label>
             </div>
-            <p class="error-msg" id="query-type-error">Please select a query type</p>
+            <p class="error-msg" id="query-type-error">
+              Please select a query type
+            </p>
           </div>
 
           <div class="form-content">
-            <label for="message">Message <span>*</span></legend>
+            <label for="message">Message <span>*</span></label>
             <textarea
               name="message"
               id="message"
@@ -129,12 +139,18 @@
                 required
                 aria-describedby="terms-error"
               />
-              <label for="terms">I consent to being contacted by the team <span>*</span></label>
+              <label for="terms"
+                >I consent to being contacted by the team <span>*</span></label
+              >
             </div>
-            <p class="error-msg" id="terms-error">To submit this form, please consent to being contacted</p>
+            <p class="error-msg" id="terms-error">
+              To submit this form, please consent to being contacted
+            </p>
           </div>
 
-          <button type="button" id="submit-button" aria-label="Send form">Submit</button>
+          <button type="button" id="submit-button" aria-label="Send form">
+            Submit
+          </button>
         </form>
       </section>
 
