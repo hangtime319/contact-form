@@ -1,50 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="assets/style.css">
-  
-  <title>Frontend Mentor | Contact form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  
-</head>
-<body>
+    <link rel="stylesheet" href="assets/style.css" />
 
-  Contact Us
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main class="container-form">
+      <section class="card-form">
+        <h1>Contact Us</h1>
 
-  First Name
-  This field is required
+        <form id="contact-form">
+          <div class="name">
+            <div class="form-content">
+              <label class="label" for="first-name-input" id="first-name"
+                >First Name <span>*</span></label
+              >
+              <input
+                type="text"
+                class="input"
+                name="first-name-input"
+                id="first-name-input"
+                required
+                aria-describedby="first-name-error"
+              />
+              <p class="error-msg" id="first-name-error">
+                This field is required
+              </p>
+            </div>
+            <div class="form-content">
+              <label class="label" for="last-name-input"
+                >Last Name <span>*</span></label
+              >
+              <input
+                type="text"
+                class="input"
+                name="last-name-input"
+                id="last-name-input"
+                required
+                aria-describedby="last-name-error"
+              />
+              <p class="error-msg" id="last-name-error">
+                This field is required
+              </p>
+            </div>
+          </div>
 
-  Last Name
-  This field is required
+          <div class="form-content">
+            <label class="label" for="email"
+              >Email Address <span>*</span></label
+            >
+            <input
+              type="email"
+              class="input"
+              name="email"
+              id="email"
+              required
+              aria-describedby="email-error"
+            />
+            <p class="error-msg" id="email-error">
+              Please enter a valid email address
+            </p>
+          </div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+          <div class="form-content">
+            <label class="label" for="query">Query Type <span>*</span></label>
+            <div class="radio-group">
+              <label class="radio-opt" for="general-enquiry">
+                <input
+                  type="radio"
+                  name="query"
+                  id="general-enquiry"
+                  value="General-Enquiry"
+                  aria-describedby="query-type-error"
+                />
+                General Enquiry
+              </label>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+              <label class="radio-opt" for="support-request">
+                <input
+                  type="radio"
+                  name="query"
+                  id="support-request"
+                  value="Support-Request"
+                  aria-describedby="query-type-error"
+                />
+                Support Request
+              </label>
+            </div>
+            <p class="error-msg" id="query-type-error">Please select a query type</p>
+          </div>
 
-  Message
-  This field is required
+          <div class="form-content">
+            <label for="message">Message <span>*</span></legend>
+            <textarea
+              name="message"
+              id="message"
+              required
+              aria-describedby="message-error"
+            ></textarea>
+            <p class="error-msg" id="message-error">This field is required</p>
+          </div>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+          <div class="form-content">
+            <div class="check-content">
+              <input
+                type="checkbox"
+                name="terms"
+                id="terms"
+                required
+                aria-describedby="terms-error"
+              />
+              <label for="terms">I consent to being contacted by the team <span>*</span></label>
+            </div>
+            <p class="error-msg" id="terms-error">To submit this form, please consent to being contacted</p>
+          </div>
 
-  Submit
+          <button type="button" id="submit-button" aria-label="Send form">Submit</button>
+        </form>
+      </section>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+      <div class="success-msg display-none" aria-live="polite" role="alert">
+        <div>
+          <img
+            src="assets/images/icon-success-check.svg"
+            alt="Icon success check"
+          />
+          <h2>Message Sent!</h2>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Leonardo Amaral</a>.
+    </footer>
+
+    <script src="assets/app.js"></script>
+  </body>
 </html>
